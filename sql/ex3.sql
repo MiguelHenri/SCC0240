@@ -3,8 +3,8 @@ CREATE TABLE Propriedades(
     ID SERIAL NOT NULL,
     Nome VARCHAR(50) NOT NULL,
     Endereco VARCHAR(100) NOT NULL,
-    IDLocalizacao SERIAL NOT NULL,
-    IDProprietario SERIAL NOT NULL,
+    IDLocalizacao INT NOT NULL,
+    IDProprietario INT NOT NULL,
     NQuartos INT NOT NULL,
     NBanheiros INT NOT NULL,
     PrecoDiaria float NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Propriedades(
 DROP TABLE IF EXISTS Avaliacoes CASCADE;
 CREATE TABLE Avaliacoes(
     ID SERIAL NOT NULL,
-    IDMensagem SERIAL NOT NULL,
+    IDMensagem INT NOT NULL,
     Limpeza VARCHAR(50),
     NotaComunicacao INT,
     NotaLocalizacao INT,
@@ -51,23 +51,23 @@ CREATE TABLE Usuarios(
     Sexo VARCHAR(50) NOT NULL,
     Telefone VARCHAR(50) NOT NULL,
     Senha VARCHAR(50) NOT NULL,
-    IDLocalizacao SERIAL NOT NULL
+    IDLocalizacao INT NOT NULL
 );
 
 DROP TABLE IF EXISTS Mensagens CASCADE;
 CREATE TABLE Mensagens(
     ID SERIAL NOT NULL,
     DataCriacao VARCHAR (50) NOT NULL,
-    IDRemetente SERIAL NOT NULL,
-    IDDestinatario SERIAL NOT NULL,
+    IDRemetente INT NOT NULL,
+    IDDestinatario INT NOT NULL,
     Texto VARCHAR(200) NOT NULL
 );
 
 DROP TABLE IF EXISTS Locacoes CASCADE;
 CREATE TABLE Locacoes(
     ID SERIAL NOT NULL,
-    IDLocatario SERIAL NOT NULL,
-    IDPropriedade SERIAL NOT NULL,
+    IDLocatario INT NOT NULL,
+    IDPropriedade INT NOT NULL,
     DataReserva DATE NOT NULL,
     CheckIn DATE NOT NULL,
     CheckOut DATE NOT NULL,
@@ -86,14 +86,14 @@ CREATE TABLE Anfitrioes(
     Conta VARCHAR(50) NOT NULL,
     Roteamento VARCHAR(50) NOT NULL,
     TipoConta VARCHAR(50) NOT NULL,
-    IDUsuario SERIAL NOT NULL
+    IDUsuario INT NOT NULL
 );
 
 DROP TABLE IF EXISTS Pontos_de_Interesse CASCADE;
 CREATE TABLE Pontos_de_Interesse(
     ID SERIAL NOT NULL,
     Endereco VARCHAR(100) NOT NULL,
-    IDLocalizacao SERIAL NOT NULL,
+    IDLocalizacao INT NOT NULL,
     NOME VARCHAR(50) NOT NULL
 );
 
@@ -101,13 +101,13 @@ DROP TABLE IF EXISTS Disponibilidade CASCADE;
 CREATE TABLE Disponibilidade(
     ID SERIAL NOT NULL,
     Datas DATE NOT NULL,
-    IDPropriedade SERIAL NOT NULL
+    IDPropriedade INT NOT NULL
 );
 
 DROP TABLE IF EXISTS Fotos CASCADE;
 CREATE TABLE Fotos(
     ID SERIAL NOT NULL,
-    IDAvaliacao SERIAL NOT NULL,
+    IDAvaliacao INT NOT NULL,
     Foto BYTEA NOT NULL
 );
 
@@ -117,5 +117,5 @@ CREATE TABLE Quartos(
     ID SERIAL NOT NULL,
     NCamasCasal INT NOT NULL,
     Individual BIT NOT NULL,
-    IDPropriedade SERIAL NOT NULL
+    IDPropriedade INT NOT NULL
 );
