@@ -15,7 +15,8 @@ CREATE TABLE Propriedades(
     HoraCheckIn TIME,
     HoraCheckOut TIME,
     Regras VARCHAR(100),
-    COMODIDADES VARCHAR(100)
+    Comodidades VARCHAR(100),
+    CasaInteira BOOLEAN
 );
 
 DROP TABLE IF EXISTS Avaliacoes CASCADE;

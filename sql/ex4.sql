@@ -1,32 +1,32 @@
-INSERT INTO Propriedades (Nome, Endereco, NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Casa na Praia', 'Rua das Palmeiras, 123, Praia do Sol', 3, 2, 200.00, 6, 2, 7, 50.00, '14:00', '12:00', 'Não é permitido fumar dentro de casa.', 'Wi-Fi, Ar condicionado, Estacionamento gratuito');
+INSERT INTO Propriedades (Nome, Endereco, NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Casa na Praia', 'Rua das Palmeiras, 123, Praia do Sol', 3, 2, 200.00, 6, 2, 7, 50.00, '14:00', '12:00', 'Não é permitido fumar dentro de casa.', 'Wi-Fi, Ar condicionado, Estacionamento gratuito', true);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Apartamento Luxo', 'Av. Principal, 456, Centro', 2, 1, 300.00, 4, 1, 14, 60.00, '15:00', '11:00', 'Proibido animais de estimação.', 'Piscina, Academia, TV a cabo');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Apartamento Luxo', 'Av. Principal, 456, Centro', 2, 1, 300.00, 4, 1, 14, 60.00, '15:00', '11:00', 'Proibido animais de estimação.', 'Piscina, Academia, TV a cabo', true);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Casa Rústica', 'Estrada da Montanha, 789, Serra Verde',  4, 3, 150.00, 8, 2, 10, NULL, '16:00', '10:00', NULL, 'Lareira, Churrasqueira, Vista panorâmica');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Casa Rústica', 'Estrada da Montanha, 789, Serra Verde',  4, 3, 150.00, 8, 2, 10, NULL, '16:00', '10:00', NULL, 'Lareira, Churrasqueira, Vista panorâmica', true);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Chalé Aconchegante', 'Rua das Flores, 101, Campo Florido', 1, 1, 100.00, 2, 1, 5, 30.00, '14:00', '12:00', 'Check-out tardio disponível mediante solicitação.', 'Lareira, Jardim, Café da manhã incluso');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Chalé Aconchegante', 'Rua das Flores, 101, Campo Florido', 1, 1, 100.00, 2, 1, 5, 30.00, '14:00', '12:00', 'Check-out tardio disponível mediante solicitação.', 'Lareira, Jardim, Café da manhã incluso', false);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Casa de Praia', 'Av. Beira Mar, 789, Praia do Norte', 5, 4, 250.00, 10, 3, 14, 70.00, '15:00', '12:00', 'Proibido festas ou eventos.', 'Wi-Fi, Piscina, Churrasqueira');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Casa de Praia', 'Av. Beira Mar, 789, Praia do Norte', 5, 4, 250.00, 10, 3, 14, 70.00, '15:00', '12:00', 'Proibido festas ou eventos.', 'Wi-Fi, Piscina, Churrasqueira', false);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Apartamento Moderno', 'Av. das Torres, 555, Centro', 3, 2, 180.00, 6, 2, 10, 50.00, '14:00', '11:00', NULL, 'Wi-Fi, Academia, Estacionamento gratuito');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Apartamento Moderno', 'Av. das Torres, 555, Centro', 3, 2, 180.00, 6, 2, 10, 50.00, '14:00', '11:00', NULL, 'Wi-Fi, Academia, Estacionamento gratuito', false);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Casa de Campo', 'Rua das Margaridas, 789, Campo Verde', 3, 2, 180.00, 6, 2, 10, 50.00, '15:00', '12:00', 'Check-in a partir das 14:00.', 'Churrasqueira, Jardim, Estacionamento gratuito');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Casa de Campo', 'Rua das Margaridas, 789, Campo Verde', 3, 2, 180.00, 6, 2, 10, 50.00, '15:00', '12:00', 'Check-in a partir das 14:00.', 'Churrasqueira, Jardim, Estacionamento gratuito', false);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Chalé Romântico', 'Rua dos Namorados, 14, Vale do Amor', 1, 1, 120.00, 2, 1, 5, 40.00, '14:00', '12:00', 'Perfeito para lua de mel.', 'Lareira, Banheira de hidromassagem, Vista panorâmica');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Chalé Romântico', 'Rua dos Namorados, 14, Vale do Amor', 1, 1, 120.00, 2, 1, 5, 40.00, '14:00', '12:00', 'Perfeito para lua de mel.', 'Lareira, Banheira de hidromassagem, Vista panorâmica', false);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Casa de Campo Luxuosa', 'Estrada dos Pinheiros, 123, Serra Dourada', 6, 4, 350.00, 12, 3, 14, 80.00, '16:00', '12:00', 'Check-out tardio disponível mediante solicitação.', 'Piscina, Sauna, Sala de jogos');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Casa de Campo Luxuosa', 'Estrada dos Pinheiros, 123, Serra Dourada', 6, 4, 350.00, 12, 3, 14, 80.00, '16:00', '12:00', 'Check-out tardio disponível mediante solicitação.', 'Piscina, Sauna, Sala de jogos', true);
 
-INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, COMODIDADES)
-VALUES ('Bangalô à Beira-Mar', 'Av. das Ondas, 789, Praia Azul', 2, 1, 280.00, 4, 2, 7, 60.00, '15:00', '11:00', 'Proibido fumar dentro do bangalô.', 'Ar condicionado, Varanda privativa, Acesso direto à praia');
+INSERT INTO Propriedades (Nome, Endereco,  NQuartos, NBanheiros, PrecoDiaria, NHospedesMax, NNoitesMin, NNoitesMax, PrecoLimpeza, HoraCheckIn, HoraCheckOut, Regras, Comodidades, CasaInteira)
+VALUES ('Bangalô à Beira-Mar', 'Av. das Ondas, 789, Praia Azul', 2, 1, 280.00, 4, 2, 7, 60.00, '15:00', '11:00', 'Proibido fumar dentro do bangalô.', 'Ar condicionado, Varanda privativa, Acesso direto à praia', true);
 
 
 INSERT INTO Avaliacoes (Limpeza, NotaComunicacao, NotaLocalizacao, NotaValor,  Mensagem)
