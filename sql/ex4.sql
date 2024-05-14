@@ -71,6 +71,78 @@ VALUES
 ('Casa de Praia Exclusiva', 'Av. do Sol, 456', 5, 9, 4, 3, 450.00, 10, 3, 14, 100.00, '16:00', '12:00', 'Check-in após as 16:00.', 'Piscina, Chuveiro externo, Varanda com vista para o mar', true),
 ('Loft Moderno', 'Rua das Ruas, 1010', 1, 10, 2, 1, 240.00, 2, 1, 7, 60.00, '14:00', '12:00', 'Proibido festas ou eventos.', 'Wi-Fi, Ar condicionado, Cozinha americana', true);
 
+-- Para IDPropriedade = 1
+INSERT INTO Quartos (IDPropriedade, NCamasSolteiro, NCamasCasal, Individual) 
+VALUES (1, 2, 1, false),
+       (1, 1, 0, true);
+-- Para IDPropriedade = 2
+VALUES (2, 2, 0, false),
+       (2, 1, 1, false),
+       (2, 0, 1, true);
+-- Para IDPropriedade = 3
+VALUES (3, 1, 0, false);
+-- Para IDPropriedade = 4
+VALUES (4, 2, 1, false),
+       (4, 0, 1, true);
+-- Para IDPropriedade = 5
+VALUES (5, 3, 0, false),
+       (5, 1, 1, false);
+-- Para IDPropriedade = 6
+VALUES (6, 1, 0, false);
+-- Para IDPropriedade = 7
+VALUES (7, 1, 1, false);
+-- Para IDPropriedade = 8
+VALUES (8, 2, 1, false),
+       (8, 0, 1, true);
+-- Para IDPropriedade = 9
+VALUES (9, 1, 1, false),
+       (9, 1, 0, false);
+-- Para IDPropriedade = 10
+VALUES (10, 1, 0, false);
+
+
+-- Para IDPropriedade = 1
+INSERT INTO Disponibilidade (IDPropriedade, Datas) 
+VALUES (1, '2024-06-01'),
+       (1, '2024-06-02'),
+       (1, '2024-06-03'),
+       (1, '2024-06-04'),
+       (1, '2024-06-05');
+-- Para IDPropriedade = 2
+VALUES (2, '2024-06-06'),
+       (2, '2024-06-07'),
+       (2, '2024-06-08'),
+       (2, '2024-06-09');
+-- Para IDPropriedade = 3
+VALUES (3, '2024-06-10'),
+       (3, '2024-06-11');
+-- Para IDPropriedade = 4
+VALUES (4, '2024-06-12'),
+       (4, '2024-06-13'),
+       (4, '2024-06-14');
+-- Para IDPropriedade = 5
+VALUES (5, '2024-06-15'),
+       (5, '2024-06-16'),
+       (5, '2024-06-17');
+-- Para IDPropriedade = 6
+VALUES (6, '2024-06-18'),
+       (6, '2024-06-19'),
+       (6, '2024-06-20');
+-- Para IDPropriedade = 7
+VALUES (7, '2024-06-21'),
+       (7, '2024-06-22');
+-- Para IDPropriedade = 8
+VALUES (8, '2024-06-23'),
+       (8, '2024-06-24');
+-- Para IDPropriedade = 9
+VALUES (9, '2024-06-25');
+-- Para IDPropriedade = 10
+VALUES (10, '2024-06-26');
+
+
+
+--- ATE AQUI EU FIZ
+
 
 INSERT INTO Avaliacoes (Limpeza, NotaComunicacao, NotaLocalizacao, NotaValor,  Mensagem)
 VALUES 
@@ -84,11 +156,6 @@ VALUES
 ('Boa', 3, 3, 'Bom', 'A casa de campo estava em boas condições de limpeza. A comunicação com o proprietário foi boa. A localização era tranquila e o valor da estadia estava adequado.');
 ('Ótima', 5, 4, 'Excelente', 'O apartamento charmoso estava muito limpo e bem cuidado. A comunicação com o anfitrião foi excelente. A localização no centro histórico era perfeita.');
 ('Muito boa', 4, 5, 'Bom', 'A casa de campo estava em condições muito boas de limpeza. A comunicação com o proprietário foi boa. A localização era ótima para quem busca tranquilidade.');
-
-
-
-
-
 
 
 INSERT INTO Mensagens (DataCriacao,  Texto) 
@@ -175,15 +242,3 @@ VALUES
 ('\x5468697320697320616e6f7468657220666f75727468206578616d706c65'); -- Foto 10
 
 
-INSERT INTO Quartos (NCamasSolteiro, NCamasCasal, Individual) 
-VALUES 
-(2, 3, false);
-(1, 2, true);
-(2, 0, false);
-(0, 4, false);
-(2, 1, true);
-(1, 1, false);
-(0, 1, false);
-(3, 2, true);
-(1, 3, false);
-(2, 3, false);
