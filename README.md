@@ -10,8 +10,16 @@
 - [Miguel Henriques](https://github.com/MiguelHenri),
 - [Vítor Fróis](http://www.github.com/vitorfrois).
 
-## 📝 Diagramas
+### 📝 Diagramas
 Veja os diagramas de Modelo Entidade Relacionamento (MER) e Modelo Relacional (MRel) desenvolvidos [AQUI](https://drive.google.com/drive/folders/1c4k9qVYS9VC1k7x5q6KtNGjXRYqn2dBn?usp=sharing).
 
-## 🔎 Consultas
+### 🔎 Consultas
 Veja os comandos e consultas SQL desenvolvidos [AQUI](https://github.com/MiguelHenri/SCC0240/tree/main/sql).
+
+### Notebook com as Consultas
+Certifique de criar um ambiente virtual e instalar as bibliotecas necessárias
+``` bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements
+```
