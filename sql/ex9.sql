@@ -1,3 +1,8 @@
-SELECT usuarios.nome, usuarios.id from usuarios,
-(SELECT * from propriedades, locacoes where
-propriedades.idproprietario=locacoes.idlocatario) as prop_loc where usuarios.id = prop_loc.idproprietario
+SELECT DISTINCT
+    U.id, U.Nome 
+FROM Usuarios U,
+(
+    SELECT * FROM Propriedades P, Locacoes L
+    WHERE P.IDProprietario = L.IDLocatario
+) AS prop_loc 
+WHERE U.id = prop_loc.IDProprietario
