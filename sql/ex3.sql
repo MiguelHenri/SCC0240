@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS Avaliacoes CASCADE;
 CREATE TABLE Avaliacoes(
     ID SERIAL NOT NULL,
     IDMensagem INT NOT NULL,
-    Limpeza VARCHAR(50),
+    NotaLimpeza INT,
     NotaComunicacao INT,
     NotaLocalizacao INT,
-    NotaValor VARCHAR(50),
+    NotaValor INT,
     IDPropriedade SERIAL NOT NULL,
     Mensagem VARCHAR(200)
 );
@@ -77,7 +77,7 @@ CREATE TABLE Locacoes(
     PrecoTotalComTaxas FLOAT,
     CodigoPromocional VARCHAR(50),
     ValorDesconto FLOAT,
-    Confirmada BIT NOT NULL
+    Confirmada BOOLEAN NOT NULL
 );
 
 DROP TABLE IF EXISTS Anfitrioes CASCADE;
@@ -116,6 +116,6 @@ CREATE TABLE Quartos(
     NCamasSolteiro INT NOT NULL,
     ID SERIAL NOT NULL,
     NCamasCasal INT NOT NULL,
-    Individual BIT NOT NULL,
+    Individual BOOLEAN NOT NULL,
     IDPropriedade INT NOT NULL
 );

@@ -71,174 +71,180 @@ VALUES
 ('Casa de Praia Exclusiva', 'Av. do Sol, 456', 5, 9, 4, 3, 450.00, 10, 3, 14, 100.00, '16:00', '12:00', 'Check-in após as 16:00.', 'Piscina, Chuveiro externo, Varanda com vista para o mar', true),
 ('Loft Moderno', 'Rua das Ruas, 1010', 1, 10, 2, 1, 240.00, 2, 1, 7, 60.00, '14:00', '12:00', 'Proibido festas ou eventos.', 'Wi-Fi, Ar condicionado, Cozinha americana', true);
 
--- Para IDPropriedade = 1
 INSERT INTO Quartos (IDPropriedade, NCamasSolteiro, NCamasCasal, Individual) 
-VALUES (1, 2, 1, false),
-       (1, 1, 0, true);
+VALUES 
+-- Para IDPropriedade = 1
+(1, 2, 1, false),
+(1, 1, 0, true),
 -- Para IDPropriedade = 2
-VALUES (2, 2, 0, false),
-       (2, 1, 1, false),
-       (2, 0, 1, true);
+(2, 2, 0, false),
+(2, 1, 1, false),
+(2, 0, 1, true),
 -- Para IDPropriedade = 3
-VALUES (3, 1, 0, false);
+(3, 1, 0, false),
 -- Para IDPropriedade = 4
-VALUES (4, 2, 1, false),
-       (4, 0, 1, true);
+(4, 2, 1, false),
+(4, 0, 1, true),
 -- Para IDPropriedade = 5
-VALUES (5, 3, 0, false),
-       (5, 1, 1, false);
+(5, 3, 0, false),
+(5, 1, 1, false),
 -- Para IDPropriedade = 6
-VALUES (6, 1, 0, false);
+(6, 1, 0, false),
 -- Para IDPropriedade = 7
-VALUES (7, 1, 1, false);
+(7, 1, 1, false),
 -- Para IDPropriedade = 8
-VALUES (8, 2, 1, false),
-       (8, 0, 1, true);
+(8, 2, 1, false),
+(8, 0, 1, true),
 -- Para IDPropriedade = 9
-VALUES (9, 1, 1, false),
-       (9, 1, 0, false);
+(9, 1, 1, false),
+(9, 1, 0, false),
 -- Para IDPropriedade = 10
-VALUES (10, 1, 0, false);
+(10, 1, 0, false);
 
 
 -- Para IDPropriedade = 1
 INSERT INTO Disponibilidade (IDPropriedade, Datas) 
-VALUES (1, '2024-06-01'),
-       (1, '2024-06-02'),
-       (1, '2024-06-03'),
-       (1, '2024-06-04'),
-       (1, '2024-06-05');
+VALUES 
+(1, '2024-06-01'),
+(1, '2024-06-02'),
+(1, '2024-06-03'),
+(1, '2024-06-04'),
+(1, '2024-06-05'),
 -- Para IDPropriedade = 2
-VALUES (2, '2024-06-06'),
-       (2, '2024-06-07'),
-       (2, '2024-06-08'),
-       (2, '2024-06-09');
+(2, '2024-06-06'),
+(2, '2024-06-07'),
+(2, '2024-06-08'),
+(2, '2024-06-09'),
 -- Para IDPropriedade = 3
-VALUES (3, '2024-06-10'),
-       (3, '2024-06-11');
+(3, '2024-06-10'),
+(3, '2024-06-11'),
 -- Para IDPropriedade = 4
-VALUES (4, '2024-06-12'),
-       (4, '2024-06-13'),
-       (4, '2024-06-14');
+(4, '2024-06-12'),
+(4, '2024-06-13'),
+(4, '2024-06-14'),
 -- Para IDPropriedade = 5
-VALUES (5, '2024-06-15'),
-       (5, '2024-06-16'),
-       (5, '2024-06-17');
+(5, '2024-06-15'),
+(5, '2024-06-16'),
+(5, '2024-06-17'),
 -- Para IDPropriedade = 6
-VALUES (6, '2024-06-18'),
-       (6, '2024-06-19'),
-       (6, '2024-06-20');
+(6, '2024-06-18'),
+(6, '2024-06-19'),
+(6, '2024-06-20'),
 -- Para IDPropriedade = 7
-VALUES (7, '2024-06-21'),
-       (7, '2024-06-22');
+(7, '2024-06-21'),
+(7, '2024-06-22'),
 -- Para IDPropriedade = 8
-VALUES (8, '2024-06-23'),
-       (8, '2024-06-24');
+(8, '2024-06-23'),
+(8, '2024-06-24'),
 -- Para IDPropriedade = 9
-VALUES (9, '2024-06-25');
+(9, '2024-06-25'),
 -- Para IDPropriedade = 10
-VALUES (10, '2024-06-26');
+(10, '2024-06-26');
 
 
 
---- ATE AQUI EU FIZ
-
-
-INSERT INTO Avaliacoes (Limpeza, NotaComunicacao, NotaLocalizacao, NotaValor,  Mensagem)
+INSERT INTO Mensagens (DataCriacao, IDRemetente, IDDestinatario, Texto) 
 VALUES 
-('Excelente', 5, 4, 'Excelente',  'A casa estava impecavelmente limpa e bem organizada. A comunicação com o proprietário foi ótima. A localização era conveniente e o valor da estadia foi excelente.');
-('Bom', 4, 3, 'Bom',  'A limpeza do apartamento estava ok, poderia ser um pouco melhor. A comunicação com o anfitrião foi boa. A localização do apartamento era ótima, perto de muitas comodidades.');
-('Muito boa', 5, 4, 'Excelente', 'A limpeza da casa rústica estava muito boa. O proprietário foi ótimo em se comunicar conosco. A localização na serra verde era excelente para quem gosta de tranquilidade.');
-('Ótima', 5, 5, 'Excelente',  'O chalé aconchegante estava ótimo em termos de limpeza. O proprietário foi muito simpático e a comunicação foi excelente. A localização é perfeita para quem busca tranquilidade.');
-('Excelente', 5, 4, 'Excelente', 'A casa de praia estava impecavelmente limpa. A comunicação com o proprietário foi excelente, e a localização na praia do norte é maravilhosa.');
-('Ótima', 4, 5, 'Bom',  'O apartamento moderno estava em ótimas condições de limpeza. A comunicação com o anfitrião foi muito boa. A localização no centro era conveniente e o valor da estadia estava adequado.');
-('Excelente', 5, 5, 'Excelente',  'A cabana nas montanhas estava extremamente limpa. A comunicação com o proprietário foi excelente. A localização oferecia uma vista panorâmica maravilhosa.');
-('Boa', 3, 3, 'Bom', 'A casa de campo estava em boas condições de limpeza. A comunicação com o proprietário foi boa. A localização era tranquila e o valor da estadia estava adequado.');
-('Ótima', 5, 4, 'Excelente', 'O apartamento charmoso estava muito limpo e bem cuidado. A comunicação com o anfitrião foi excelente. A localização no centro histórico era perfeita.');
-('Muito boa', 4, 5, 'Bom', 'A casa de campo estava em condições muito boas de limpeza. A comunicação com o proprietário foi boa. A localização era ótima para quem busca tranquilidade.');
+('2024-05-01', 1, 2, 'Olá! Gostaria de saber mais sobre a sua propriedade.'),
+('2024-05-01', 2, 1, 'Claro! O que você gostaria de saber?'),
+('2024-05-02', 3, 4, 'A casa está disponível para o próximo fim de semana?'),
+('2024-05-02', 4, 3, 'Sim, está disponível. Você gostaria de reservar?'),
+('2024-05-03', 5, 6, 'Qual é o horário de check-in na sua propriedade?'),
+('2024-05-03', 6, 5, 'O check-in pode ser feito a partir das 14:00.'),
+('2024-05-04', 7, 8, 'A casa tem Wi-Fi disponível?'),
+('2024-05-04', 8, 7, 'Sim, a casa tem Wi-Fi de alta velocidade.'),
+('2024-05-05', 9, 10, 'Posso levar meu cachorro para a sua propriedade?'),
+('2024-05-05', 10, 9, 'Desculpe, mas não aceitamos animais de estimação.'),
+('2024-05-06', 11, 12, 'O bairro é seguro para caminhadas noturnas?'),
+('2024-05-06', 12, 11, 'Sim, é um bairro muito seguro.'),
+('2024-05-07', 13, 14, 'A propriedade tem estacionamento disponível?'),
+('2024-05-07', 14, 13, 'Sim, temos estacionamento gratuito para os hóspedes.'),
+('2024-05-08', 15, 16, 'Quais são as regras da casa?'),
+('2024-05-08', 16, 15, 'As regras principais são: não fumar dentro da casa e respeitar os horários de silêncio.'),
+('2024-05-09', 17, 18, 'O imóvel tem cozinha completa?'),
+('2024-05-09', 18, 17, 'Sim, a cozinha está totalmente equipada.'),
+('2024-05-10', 19, 20, 'Há um supermercado próximo à casa?');
 
-
-INSERT INTO Mensagens (DataCriacao,  Texto) 
+INSERT INTO Avaliacoes (IDMensagem, IDPropriedade, NotaLimpeza, NotaComunicacao, NotaLocalizacao, NotaValor, Mensagem)
 VALUES 
-('2024-05-11 08:30:00', 'Olá João, como você está?');
-('2024-05-12 10:15:00', 'Oi Maria! Estou bem, obrigado. E você?');
-('2024-05-13 14:20:00', 'Oi Maria, tudo bem?');
-('2024-05-14 16:45:00', 'Oi Ana, estou bem, obrigada. E você?');
-('2024-05-15 09:00:00', 'Olá Ana, estou bem sim. Como foi o seu dia?');
-('2024-05-16 11:30:00', 'Oi João, meu dia foi bom, obrigada por perguntar.');
-('2024-05-17 13:20:00','João, você viu a nova exposição no museu?');
-('2024-05-18 15:10:00', 'Sim, Maria! Eu fui lá ontem. É incrível!');
-('2024-05-19 17:00:00', 'Maria, podemos combinar de ir juntos?');
-('2024-05-20 19:30:00', 'Claro, Ana! Vamos marcar uma data.');
+(1, 1, 5, 5, 4, 4, 'Ótima experiência, casa muito limpa e anfitrião comunicativo.'),
+(2, 2, 4, 3, 5, 4, 'Bom apartamento, mas a comunicação poderia ser melhor.'),
+(3, 3, 3, 4, 4, 3, 'Cabana aconchegante, mas limpeza deixou a desejar.'),
+(4, 4, 5, 5, 5, 5, 'Perfeito para família, muito conforto e boa localização.'),
+(5, 5, 4, 4, 4, 4, 'Casa de praia relaxante, tudo muito bom.'),
+(6, 6, 2, 3, 4, 3, 'Limpeza ruim, mas boa localização e preço justo.'),
+(7, 7, 5, 5, 5, 5, 'Chalé romântico e muito bem cuidado.'),
+(8, 8, 4, 5, 5, 4, 'Casa de campo tradicional e muito confortável.'),
+(9, 9, 3, 4, 3, 3, 'Apartamento moderno, mas com algumas falhas na limpeza.'),
+(10, 10, 5, 5, 5, 5, 'Cabana maravilhosa, local tranquilo e limpo.'),
+(11, 1, 4, 4, 4, 4, 'Sobrado confortável e anfitrião atencioso.'),
+(12, 2, 5, 5, 5, 5, 'Casa de veraneio incrível, voltarei com certeza.'),
+(13, 3, 3, 4, 4, 3, 'Loft urbano bom, mas limpeza precisa melhorar.'),
+(14, 4, 5, 5, 5, 5, 'Chalé da serra perfeito para casais.'),
+(15, 5, 2, 3, 4, 3, 'Casa de campo rústica e tranquila, mas limpeza não foi boa.'),
+(16, 6, 4, 4, 4, 4, 'Apartamento de luxo muito bom.'),
+(17, 7, 5, 5, 5, 5, 'Cabana à beira do lago maravilhosa.'),
+(18, 8, 3, 3, 3, 3, 'Sobrado confortável, mas limpeza deixou a desejar.'),
+(19, 9, 5, 5, 5, 5, 'Casa de praia relaxante e bem cuidada.'),
+(20, 10, 4, 4, 4, 4, 'Loft moderno e anfitrião atencioso.');
 
 
-INSERT INTO Locacoes (DataReserva, CheckIn, CheckOut, NHospedes, Imposto, PrecoTotal, PrecoTotalComTaxas, CodigoPromocional, ValorDesconto, Confirmada)
+
+INSERT INTO Locacoes (IDLocatario, IDPropriedade, DataReserva, CheckIn, CheckOut, NHospedes, Imposto, PrecoTotal, PrecoTotalComTaxas, CodigoPromocional, ValorDesconto, Confirmada)
 VALUES 
-('2024-05-01', '2024-06-01', '2024-06-08', 4, 20.00, 1500.00, 1560.00, NULL, 0.00, true);
-('2024-05-02', '2024-06-10', '2024-06-20', 2, 15.00, 1200.00, 1245.00, NULL, 0.00, true);
-('2024-05-03', '2024-06-15', '2024-06-22', 3, 18.00, 1800.00, 1872.00, 'VERAO2024', 50.00, false);
-('2024-05-05', '2024-06-20', '2024-06-25', 2, 12.00, 700.00, 724.00, NULL, 0.00, true);
-('2024-05-06', '2024-07-01', '2024-07-10', 6, 25.00, 2800.00, 2875.00, 'VERAO2024', 75.00, false);
-('2024-05-08', '2024-07-15', '2024-07-25', 4, 20.00, 2200.00, 2270.00, NULL, 0.00, true);
-('2024-05-10', '2024-08-01', '2024-08-07', 5, 22.00, 3200.00, 3314.00, NULL, 0.00, false);
-('2024-05-12', '2024-08-20', '2024-08-27', 3, 18.00, 1800.00, 1872.00, 'FERIAS2024', 50.00, true);
-('2024-05-15', '2024-09-05', '2024-09-15', 4, 20.00, 2500.00, 2600.00, NULL, 0.00, false);
-('2024-05-18', '2024-09-10', '2024-09-20', 2, 15.00, 1400.00, 1455.00, 'VERAO2024', 55.00, true);
+(8, 1, '2024-05-01', '2024-05-15', '2024-05-20', 4, 30.00, 1000.00, 1030.00, 'VERAO2024', 50.00, true),
+(9, 2, '2024-05-02', '2024-06-01', '2024-06-10', 2, 20.00, 900.00, 920.00, 'DESCONTO10', 30.00, true),
+(10, 3, '2024-05-03', '2024-05-20', '2024-05-25', 2, 15.00, 600.00, 615.00, NULL, 0.00, true),
+(11, 4, '2024-05-04', '2024-07-01', '2024-07-07', 6, 35.00, 1500.00, 1535.00, 'INVERNO', 70.00, true),
+(12, 5, '2024-05-05', '2024-06-10', '2024-06-20', 8, 50.00, 2500.00, 2550.00, 'PROMO50', 100.00, true),
+(13, 6, '2024-05-06', '2024-05-15', '2024-05-18', 2, 10.00, 600.00, 610.00, NULL, 0.00, true),
+(14, 7, '2024-05-07', '2024-08-01', '2024-08-10', 2, 15.00, 900.00, 915.00, 'AGOSTO', 40.00, true),
+(15, 8, '2024-05-08', '2024-05-25', '2024-06-01', 4, 25.00, 1400.00, 1425.00, NULL, 0.00, true),
+(16, 9, '2024-05-09', '2024-06-01', '2024-06-05', 2, 10.00, 500.00, 510.00, 'JUNHO2024', 20.00, true),
+(17, 10, '2024-05-10', '2024-06-15', '2024-06-20', 2, 15.00, 900.00, 915.00, NULL, 0.00, true),
+(18, 11, '2024-05-11', '2024-07-05', '2024-07-12', 6, 35.00, 1600.00, 1635.00, 'JULHO2024', 70.00, true),
+(19, 12, '2024-05-12', '2024-06-10', '2024-06-17', 6, 30.00, 1700.00, 1730.00, NULL, 0.00, true),
+(20, 13, '2024-05-13', '2024-07-20', '2024-07-25', 2, 20.00, 800.00, 820.00, 'PROMO20', 40.00, true),
+(8, 14, '2024-05-14', '2024-05-30', '2024-06-04', 4, 25.00, 1300.00, 1325.00, NULL, 0.00, true),
+(9, 15, '2024-05-15', '2024-06-05', '2024-06-10', 2, 15.00, 600.00, 615.00, 'DESCONTO15', 30.00, true),
+(10, 16, '2024-05-16', '2024-07-01', '2024-07-07', 2, 20.00, 1000.00, 1020.00, NULL, 0.00, true),
+(11, 17, '2024-05-17', '2024-06-15', '2024-06-20', 6, 35.00, 1500.00, 1535.00, 'INVERNO15', 50.00, true),
+(12, 18, '2024-05-18', '2024-07-10', '2024-07-20', 8, 50.00, 2800.00, 2850.00, 'VERAO50', 100.00, true),
+(13, 19, '2024-05-19', '2024-08-01', '2024-08-10', 4, 25.00, 1400.00, 1425.00, NULL, 0.00, true),
+(14, 20, '2024-05-20', '2024-06-01', '2024-06-10', 2, 15.00, 800.00, 815.00, 'JUNHO20', 20.00, true);
 
 
-INSERT INTO Anfitrioes (Conta, Roteamento, TipoConta) 
+INSERT INTO Pontos_de_Interesse (Endereco, IDLocalizacao, Nome) 
 VALUES 
-('conta1', 'roteamento1', 'tipo1');
-('conta2', 'roteamento2', 'tipo2');
-('conta3', 'roteamento3', 'tipo3');
-('conta4', 'roteamento4', 'tipo4');
-('conta5', 'roteamento5', 'tipo5');
-('conta6', 'roteamento6', 'tipo6');
-('conta7', 'roteamento7', 'tipo7');
-('conta8', 'roteamento8', 'tipo8');
-('conta9', 'roteamento9', 'tipo9');
-('conta10', 'roteamento10', 'tipo10');
+('Rua das Flores, 123', 1, 'Parque Central'),
+('Avenida das Nações, 456', 2, 'Museu de Arte Moderna'),
+('Praça da Liberdade, 789', 3, 'Monumento Histórico'),
+('Rua do Comércio, 101', 4, 'Mercado Municipal'),
+('Avenida Paulista, 202', 5, 'Centro Cultural'),
+('Rua dos Estudantes, 303', 6, 'Biblioteca Pública'),
+('Rua do Sol, 404', 7, 'Praia do Sol'),
+('Avenida das Palmeiras, 505', 8, 'Jardim Botânico'),
+('Rua das Estrelas, 606', 9, 'Planetário'),
+('Avenida das Montanhas, 707', 10, 'Trilha da Montanha');
 
 
-INSERT INTO Pontos_de_Interesse (Endereco, NOME) 
+INSERT INTO Fotos (IDAvaliacao, Foto) 
 VALUES 
-('Av. Paulista, 123','Parque das Flores');
-('Rua Augusta, 456', 'Museu de Arte Moderna');
-('Praça da Sé','Catedral Metropolitana de São Paulo');
-('Av. Rio Branco, 789', 'Biblioteca Nacional');
-('Rua Oscar Freire, 101', 'Galeria de Arte Contemporânea');
-('Av. Atlântica, 555', 'Praia de Copacabana');
-('Av. Beira Mar, 789', 'Praia de Ipanema');
-('Rua das Palmeiras, 14', 'Parque Nacional da Tijuca');
-('Av. das Flores, 999', 'Jardim Botânico');
-('Rua das Margaridas, 21',  'Museu Histórico Nacional');
+(1, 'foto1.jpg'),
+(1, 'foto2.jpg'),
+(2, 'foto3.jpg'),
+(2, 'foto4.jpg'),
+(3, 'foto5.jpg'),
+(3, 'foto6.jpg'),
+(4, 'foto7.jpg'),
+(4, 'foto8.jpg'),
+(5, 'foto9.jpg'),
+(5, 'foto10.jpg'),
+(6, 'foto11.jpg'),
+(6, 'foto12.jpg'),
+(7, 'foto13.jpg'),
+(7, 'foto14.jpg'),
+(8, 'foto15.jpg');
 
-
-INSERT INTO Disponibilidade (Datas) 
-VALUES 
-('2024-05-15');
-('2024-05-16');
-('2024-05-17');
-('2024-05-18');
-('2024-05-19');
-('2024-05-20');
-('2024-05-21');
-('2024-05-22');
-('2024-05-23');
-('2024-05-24');
-
-
-INSERT INTO Fotos (Foto) 
-VALUES 
-('\x53616d706c6520666f746f'); -- Foto 1
-('\x48656c6c6f20576f726c64'); -- Foto 2
-('\x5468697320697320616e6f7468657220666f746f'); -- Foto 3
-('\x5468697320697320616e6f7468657220666f75727468206578616d706c65'); -- Foto 4
-('\x48656c6c6f20576f726c642066726f6d2074686520736572766572'); -- Foto 5
-('\x5468697320697320612066696c652066726f6d2074686520736572766572'); -- Foto 6
-('\x48656c6c6f20576f726c642066726f6d20746865206569676874686965'); -- Foto 7
-('\x5468697320697320616e6f7468657220666f7572746820656967687468696572'); -- Foto 8
-('\x48656c6c6f20576f726c642066726f6d20746865206578616d706c652e'); -- Foto 9
-('\x5468697320697320616e6f7468657220666f75727468206578616d706c65'); -- Foto 10
 
 
