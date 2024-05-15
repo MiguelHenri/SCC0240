@@ -1,11 +1,33 @@
-SELECT locatarios.id, locatarios.nascimento from (select usuarios.id, usuarios.nascimento from usuarios, locacoes
-where locacoes.idlocatario = usuarios.id) as locatarios WHERE
-locatarios.nascimento > ANY 
-(SELECT usuarios.nascimento from usuarios, propriedades
-where usuarios.id = propriedades.idproprietario);
+SELECT DISTINCT
+    Locatarios.ID, Locatarios.Nome, Locatarios.Nascimento 
+FROM 
+(
+    SELECT 
+        Usuarios.ID, Usuarios.Nome, Usuarios.Nascimento 
+    FROM Usuarios, Locacoes
+    WHERE Locacoes.IDLocatario = Usuarios.ID
+) AS Locatarios 
+WHERE Locatarios.Nascimento > ANY 
+(
+    SELECT 
+        Usuarios.Nascimento 
+    FROM Usuarios, Propriedades
+    WHERE Usuarios.ID = Propriedades.idproprietario
+);
 
-SELECT locatarios.id, locatarios.nascimento from (select usuarios.id, usuarios.nascimento from usuarios, locacoes
-where locacoes.idlocatario = usuarios.id) as locatarios WHERE
-locatarios.nascimento > ALL
-(SELECT usuarios.nascimento from usuarios, propriedades
-where usuarios.id = propriedades.idproprietario);
+SELECT 
+    Locatarios.ID, Locatarios.Nascimento 
+FROM 
+(
+    SELECT 
+        Usuarios.ID, Usuarios.Nascimento 
+    FROM Usuarios, Locacoes
+    WHERE Locacoes.IDlocatario = Usuarios.ID
+) AS Locatarios WHERE
+Locatarios.Nascimento > ALL
+(
+    SELECT 
+        Usuarios.Nascimento 
+    FROM Usuarios, Propriedades
+    WHERE Usuarios.ID = Propriedades.IDproprietario
+);
