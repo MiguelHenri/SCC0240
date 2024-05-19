@@ -16,7 +16,7 @@ WHERE Locatarios.Nascimento > ANY
 );
 
 SELECT 
-    Locatarios.ID, Locatarios.Nome Locatarios.Nascimento 
+    Locatarios.ID, Locatarios.Nome, Locatarios.Nascimento 
 FROM 
 (
     SELECT 
