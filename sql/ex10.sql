@@ -16,11 +16,11 @@ WHERE Locatarios.Nascimento > ANY
 );
 
 SELECT 
-    Locatarios.ID, Locatarios.Nascimento 
+    Locatarios.ID, Locatarios.Nome Locatarios.Nascimento 
 FROM 
 (
     SELECT 
-        Usuarios.ID, Usuarios.Nascimento 
+        Usuarios.ID, Usuarios.Nome, Usuarios.Nascimento 
     FROM Usuarios, Locacoes
     WHERE Locacoes.IDlocatario = Usuarios.ID
 ) AS Locatarios WHERE
