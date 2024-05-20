@@ -1,0 +1,2 @@
+# Exercício 4
+Os comandos aqui usados servem para preencher os dados da base, é especificado uma relação, os atributos e uma tupla contendo os valores que serão inseridos na relação especificada, podendo inserir mais de uma tupla de valores por comando, isso é feito para cada uma das relações do modelo.

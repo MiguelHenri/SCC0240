@@ -1,0 +1,2 @@
+# Exercício 3
+Esses foram os comandos para definir as tabelas na base de dados, segue o modelo relacional criado previamente. Para cada tabela criada com o comando CREATE TABLE, é definido seu nome, os atributos e o tipo deles, e se cada atributo pode ser NULL. Antes de executar os comandos de CREATE TABLE, é executado um DROP TABLE com a condição que a tabela já existe, para prevenir erros caso alguma tabela já tenha sido criada.
