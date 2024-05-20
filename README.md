@@ -23,3 +23,6 @@ $ python -m venv venv
 $ source venv/bin/activate
 $ pip install -r requirements
 ```
+
+### Geração de PDFs
+É possível compilar os arquivos em `/markdown` para obter explicações sobre os comandos SQL. Para isso é necessário ter o Pandoc e as bibliotecas latex-live instaladas e então executar o script `./gerar_pdf.sh`
