@@ -246,5 +246,18 @@ VALUES
 (7, 'foto14.jpg'),
 (8, 'foto15.jpg');
 
+------------------- ATUALIZANDO VALORES ---------------------------
+UPDATE Locacoes
+SET PrecoTotal = (
+    SELECT
+        ((L.checkout - L.checkin) * P.precodiaria) AS PrecoTotal
+    FROM Locacoes L
+    JOIN Propriedades P on L.IDPropriedade = P.ID
+    WHERE Locacoes.ID = L.ID
+)
 
+UPDATE Locacoes
+SET PrecoTotalComTaxas = (
+    PrecoTotal + Imposto
+)
 

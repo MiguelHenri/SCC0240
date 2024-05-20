@@ -24,7 +24,7 @@ As consultas de dois até cinco mostram a quantidade de propriedades de cada cla
     </tbody>
 </table>
 
-- A segunda é o número de quartos; 
+- a segunda é o número de quartos; 
 <table>
     <thead>
         <tr>
