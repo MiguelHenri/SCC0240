@@ -16,10 +16,10 @@ Veja os diagramas de Modelo Entidade Relacionamento (MER) e Modelo Relacional (M
 ### 🔎 Consultas
 Veja os comandos e consultas SQL desenvolvidos [AQUI](https://github.com/MiguelHenri/SCC0240/tree/main/sql).
 
-### Notebook com as Consultas
-Certifique de criar um ambiente virtual e instalar as bibliotecas necessárias
+### 💻 Notebook com as Consultas
+Certifique de criar um ambiente virtual e instalar as bibliotecas necessárias!
 ``` bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements
+$ python -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements
 ```
