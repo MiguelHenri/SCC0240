@@ -192,7 +192,7 @@ Quartos = {[IDPropriedade, ID]{.underline}, Individual, NSolteiro, NCasal}
 ### Locação
 Analisamos se pode existir mais de uma instância do CE Agregação. Como é possível repassar todos atributos do CR gerador para o CR Agregação, mapeamos apenas o CE Agregação.
 
-Locação = {DataCheckIn, IDHospede, IDPropriedade, DataReserva, DataCheckout, NHospedes, Imposto, PrecoTotal, PrecoImpostos, CodigoPromocional, ValorDesconto, Confirmada}
+Locação = {[DataCheckIn +, IDHospede, IDPropriedade]{.underline}, DataReserva, DataCheckout, NHospedes, Imposto, PrecoTotal, PrecoImpostos, CodigoPromocional, ValorDesconto, Confirmada}
 
 (IDHospede) &#8594; Usuarios(ID)
 
