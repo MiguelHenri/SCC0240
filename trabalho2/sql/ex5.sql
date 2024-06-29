@@ -44,7 +44,7 @@ CREATE TABLE Usuarios(
 
 DROP TABLE IF EXISTS Mensagens CASCADE;
 CREATE TABLE Mensagens(
-    ID INT
+    ID INT,
     IDPropriedade INT NOT NULL,
     DataCriacao VARCHAR (50) NOT NULL,
     IDRemetente INT NOT NULL,
@@ -108,7 +108,7 @@ CREATE TABLE Contas(
     IDUsuario INT,
     Numero INT,
     Tipo VARCHAR(50),
-    Roteamento VARCHAR(50),
+    Roteamento VARCHAR(50)
 );
 
 DROP TABLE IF EXISTS DatasDisponiveis CASCADE;
