@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Propriedades CASCADE;
 CREATE TABLE Propriedades(
-    ID SERIAL NOT NULL, 
+    ID BIGINT NOT NULL, 
     Nome VARCHAR(50) NOT NULL,
     Endereco VARCHAR(100) NOT NULL,
     IDLocalizacao INT NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE Propriedades(
 
 DROP TABLE IF EXISTS Localizacoes CASCADE; 
 CREATE TABLE Localizacoes(
-    ID SERIAL NOT NULL,
+    ID INT NOT NULL,
     Pais VARCHAR(50) NOT NULL,
     Estado VARCHAR(50) NOT NULL,
     Cidade VARCHAR(50) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE Localizacoes(
 
 DROP TABLE IF EXISTS Usuarios CASCADE;
 CREATE TABLE Usuarios(
-    ID SERIAL NOT NULL,
+    ID INT NOT NULL,
     Nome VARCHAR(50) NOT NULL,
     Email VARCHAR(50) NOT NULL,
     Sobrenome VARCHAR(50) NOT NULL,
@@ -44,8 +44,7 @@ CREATE TABLE Usuarios(
 
 DROP TABLE IF EXISTS Mensagens CASCADE;
 CREATE TABLE Mensagens(
-    ID INT,
-    IDPropriedade INT NOT NULL,
+    IDPropriedade BIGINT NOT NULL,
     DataCriacao VARCHAR (50) NOT NULL,
     IDRemetente INT NOT NULL,
     IDDestinatario INT NOT NULL,
@@ -59,7 +58,7 @@ CREATE TABLE Mensagens(
 DROP TABLE IF EXISTS Locacao CASCADE;
 CREATE TABLE Locacao(
     IDHospede INT NOT NULL,
-    IDPropriedade INT NOT NULL,
+    IDPropriedade BIGINT NOT NULL,
     DataReserva DATE NOT NULL,
     DataCheckIn DATE NOT NULL,
     DataCheckOut DATE NOT NULL,
@@ -94,12 +93,12 @@ CREATE TABLE Quartos(
     NSolteiro INT NOT NULL,
     NCasal INT NOT NULL,
     Individual BOOLEAN NOT NULL,
-    IDPropriedade INT NOT NULL
+    IDPropriedade BIGINT NOT NULL
 );
 
 DROP TABLE IF EXISTS Comodidades CASCADE;
 CREATE TABLE Comodidades(
-    IDPropriedade INT,
+    IDPropriedade BIGINT,
     Comodidade VARCHAR(50)
 );
 
@@ -113,25 +112,25 @@ CREATE TABLE Contas(
 
 DROP TABLE IF EXISTS DatasDisponiveis CASCADE;
 CREATE TABLE DatasDisponiveis(
-    IDPropriedade INT,
+    IDPropriedade BIGINT,
     Data DATE
 );
 
 DROP TABLE IF EXISTS Regras CASCADE;
 CREATE TABLE Regras(
-    IDPropriedade INT,
+    IDPropriedade BIGINT,
     Regra VARCHAR(200)
 );
 
 DROP TABLE IF EXISTS Reviews CASCADE;
 CREATE TABLE Reviews(
-    listing_id INT,
+    listing_id BIGINT,
     date_ DATE
 );
 
 DROP TABLE IF EXISTS Listings CASCADE;
 CREATE TABLE Listings(
-    ID INT,
+    ID BIGINT,
     name_ VARCHAR(200),
     host_id INT,
     host_name VARCHAR(60),
@@ -153,7 +152,7 @@ CREATE TABLE Listings(
 
 DROP TABLE IF EXISTS Calendar CASCADE;
 CREATE TABLE Calendar(
-    listing_id INT,
+    listing_id BIGINT,
     date_ DATE,
     available VARCHAR(3), --x
     price VARCHAR(30),
@@ -162,12 +161,16 @@ CREATE TABLE Calendar(
     maximum_nights INT
 );
 
-INSERT INTO Mensagens (ID, DataCriacao) --preencher as tabelas com os dados do reviews
-SELECT listing_id, date_
+INSERT INTO Mensagens (DataCriacao) --preencher as tabelas com os dados do reviews
+SELECT date_
 FROM Reviews;
 
-INSERT INTO Propriedades (MinNoites, MaxNoites) --preencher as tabelas com os dados do calendar
-SELECT minimum_nights, maximum_nights
+INSERT INTO Propriedades (ID) --preencher as tabelas com os dados do reviews
+SELECT listing_id
+FROM Reviews;
+
+INSERT INTO Propriedades (ID, MinNoites, MaxNoites) --preencher as tabelas com os dados do calendar
+SELECT listing_id, minimum_nights, maximum_nights
 FROM Calendar;
 
 INSERT INTO Locacao (DataReserva, PrecoTotal, PrecoImpostos) 
