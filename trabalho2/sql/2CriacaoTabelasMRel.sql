@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS Propriedades CASCADE;
 CREATE TABLE Propriedades(
-    ID BIGINT, 
-    Nome VARCHAR(300),
+    ID SERIAL,
+    Nome VARCHAR(300) PRIMARY KEY,
     Endereco VARCHAR(100),
     IDLocalizacao INT,
-    IDAnfitriao INT,
+    IDAnfitriao INT PRIMARY KEY,
     NQuartos INT,
     NBanheiros INT,
     PrecoDiaria float,
