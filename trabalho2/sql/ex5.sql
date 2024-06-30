@@ -165,16 +165,10 @@ INSERT INTO Mensagens (IDPropriedade, DataCriacao) --preencher as tabelas com os
 SELECT listing_id, date_
 FROM Reviews;
 
-INSERT INTO Propriedades (ID, MinNoites, MaxNoites) --preencher as tabelas com os dados do calendar
-SELECT listing_id, minimum_nights, maximum_nights
-FROM Calendar;
-
-INSERT INTO Locacao (IDPropriedade, DataReserva, PrecoImpostos, PrecoTotal)
-SELECT listing_id, 
-       date_, 
-       CAST(REPLACE(REPLACE(adjusted_price, '$', ''), ',', '') AS FLOAT), 
-       CAST(REPLACE(REPLACE(price, '$', ''), ',', '') AS FLOAT)
-FROM Calendar;
+INSERT INTO Locacao (IDPropriedade, DataReserva)
+SELECT listing_id, date_
+FROM Calendar
+WHERE available = 't';
 
 INSERT INTO Propriedades (ID, Nome, IDAnfitriao, PrecoDiaria, MinNoites) --preencher as tabelas com os dados do listings
 SELECT ID, name_, host_id, price, minimum_nights --n sei colocar o nome do anfitriao
@@ -183,4 +177,3 @@ FROM Listings;
 INSERT INTO Usuarios (ID, Nome, EAnfitriao)
 SELECT host_id, host_name, TRUE
 FROM Listings;
-
