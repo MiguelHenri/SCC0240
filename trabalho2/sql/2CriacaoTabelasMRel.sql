@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Propriedades CASCADE;
 CREATE TABLE Propriedades(
-    ID BIGINT PRIMARY KEY, 
+    ID BIGINT PRIMARY KEY , 
     Nome VARCHAR(300) ,
     Endereco VARCHAR(100) ,
     IDLocalizacao INT ,
@@ -29,7 +29,7 @@ CREATE TABLE Localizacoes(
 
 DROP TABLE IF EXISTS Usuarios CASCADE;
 CREATE TABLE Usuarios(
-    ID INT ,
+    ID INT , 
     Nome VARCHAR(100) ,
     Email VARCHAR(50) ,
     Sobrenome VARCHAR(100) ,

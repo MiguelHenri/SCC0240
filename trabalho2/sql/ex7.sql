@@ -7,7 +7,7 @@ SELECT
 FROM
     Propriedades P
 JOIN 
-    Disponibilidades D ON P.ID == D.IDPropriedade
+    DatasDisponiveis D ON P.ID = D.IDPropriedade
 WHERE
     D.Data BETWEEN '2024-01-01' AND '2024-12-31';
 
@@ -16,7 +16,7 @@ SELECT
     EXTRACT(MONTH FROM P.Data) AS Mes,
     AVG(PrecoDiaria) AS PrecoMedio
 FROM 
-    PropriedadesDisponiveis
+    PropriedadesDisponiveis P
 GROUP BY 
     EXTRACT(MONTH FROM P.Data)
 ORDER BY Mes;

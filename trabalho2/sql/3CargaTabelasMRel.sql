@@ -13,10 +13,13 @@ FROM Listings;
 
 -- preenchendo as propriedades com base nos listings
 INSERT INTO Propriedades (ID, Nome, IDAnfitriao, PrecoDiaria, MinNoites, IDLocalizacao)
-SELECT L.ID, L.name_, L.host_id, L.price, L.minimum_nights, Loc.ID
+SELECT DISTINCT L.ID, L.name_, L.host_id, L.price, L.minimum_nights, Loc.ID
 FROM Listings AS L
 INNER JOIN Localizacoes AS Loc ON L.neighbourhood = Loc.Bairro; -- localizacao com base no bairro
 
-INSERT INTO Usuarios (ID, Nome, EAnfitriao)
-SELECT host_id, host_name, TRUE
-FROM Listings;
+-- preenchendo os dados dos usuários com base nos listings
+-- todo usuário é anfitrião e a localização é obtida com base no bairro
+INSERT INTO Usuarios (ID, Nome, EAnfitriao, IDLocalizacao)
+SELECT DISTINCT L.host_id, L.host_name, TRUE, Loc.ID
+FROM Listings AS L
+INNER JOIN Localizacoes AS Loc ON L.neighbourhood = Loc.Bairro;

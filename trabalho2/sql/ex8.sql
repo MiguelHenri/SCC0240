@@ -11,15 +11,16 @@ JOIN
 JOIN 
     Propriedades P ON U.ID = P.IDAnfitriao
 GROUP BY 
-    U.ID -- Agrupando por anfitriões únicos (ID é PK)
+    U.ID, U.Nome, L.Cidade
 HAVING 
-    COUNT(P.ID) >= 3;
+    COUNT(P.ID) >= 3
+ORDER BY 
+    QuantidadeDeImoveis DESC;
 
 -- Drop do índice caso exista
 DROP INDEX IF EXISTS indexAnfitriao;
 
 -- Criação do índice na coluna IDAnfitriao
 -- Como ela é usada no JOIN, para uma tabela com muitas propriedades o índice será efetivo.
-CREATE INDEX indexAnfitriao ON Propriedades (IDAnfitriao);
-
 -- Use o comando EXPLAIN ANALYZE para verificar os tempos de execução.
+CREATE INDEX indexAnfitriao ON Propriedades (IDAnfitriao);
