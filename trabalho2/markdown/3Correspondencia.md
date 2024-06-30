@@ -19,9 +19,11 @@ SET name_ = CONCAT(
 Dessa forma, `Condo in Rio de Janeiro · *4.70 · 2 bedrooms · 2 beds · 1 bath` se transforma em `Condo in Rio de Janeiro 2 bedrooms 2 beds 1 bath` e podemos criar uma tabela em SQL para Listings. 
 
 
-| **Atributo em Listings**     | **Atributo em Propriedade**      |
+Para mapear as informações pra propriedade, será usado as duas relação oriundas de Listings original:
+
+**
+| **Atributo em Property** | **Atributo em Propriedade**          |
 | ------------------------ | ------------------------------------ |
-| id                       | NULL                                 |
 | name                     | Nome                                 |
 | host\_id                 | IDAnfitriao                          |
 | neighbourhood\_group     | NULL                                 |
@@ -29,15 +31,21 @@ Dessa forma, `Condo in Rio de Janeiro · *4.70 · 2 bedrooms · 2 beds · 1 bath
 | latitude                 | NULL                                 |
 | longitude                | NULL                                 |
 | room\_type               | CasaInteira                          |
-| price                    | ValorDiaria                          |
-| minimum\_nights          | MinNoites                            |
-| maximum\_nights          | MaxNoites                            |
 | number\_of\_reviews      | NULL                                 |
 | last\_review             | NULL                                 |
 | reviews\_per\_month      | NULL                                 |
-| availability\_365        | NULL                                 |
 | number\_of\_reviews\_ltm | NULL                                 |
 | license                  | NULL                                 |
+
+**
+| **Atributo em Listings** | **Atributo em Propriedade**              |
+| ------------------------ | ------------------------------------ |
+| id                       | NULL                                   |
+| name                     | Nome                                 |
+| host\_id                 | IDAnfitriao                          |
+| price                    | ValorDiaria                          |
+| minimum\_nights          | MinNoites                            |
+| availability\_365        | NULL                                 |
 
 ## Hosts
 
