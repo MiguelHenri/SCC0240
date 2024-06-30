@@ -1,5 +1,6 @@
 # Correspondência
 Correlação entre os atributos existentes nas tabelas geradas pelo mapeamento e pela carga de dados.
+
 ## Listings
 
 | **Atributo em Listings**     | **Atributo em Propriedade**              |
