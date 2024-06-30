@@ -1,12 +1,8 @@
 DROP TABLE IF EXISTS Reviews CASCADE;
 CREATE TABLE Reviews(
     listing_id BIGINT,
-    date_ DATE
+    date DATE
 );
-
--- Load data into Reviews
-COPY Reviews(listing_id, id, date, reviewer_id, reviewer_name, comments)
-FROM 'data/reviews.csv' DELIMITER ',' CSV HEADER;
 
 DROP TABLE IF EXISTS Listings CASCADE;
 CREATE TABLE Listings(
@@ -30,9 +26,6 @@ CREATE TABLE Listings(
     license VARCHAR(50) --x
 );
 
--- Load data into Listings
-COPY Listings(id, name, neighbourhood, room_type, price, minimum_nights, maximum_nights, number_of_reviews, last_review, calculated_host_listings_count, availability_365)
-FROM 'data/listings.csv' DELIMITER ',' CSV HEADER;
 
 DROP TABLE IF EXISTS Calendar CASCADE;
 CREATE TABLE Calendar(
@@ -45,6 +38,9 @@ CREATE TABLE Calendar(
     maximum_nights INT
 );
 
--- Load data into Calendar
-COPY Calendar(listing_id, date, available, price)
-FROM 'data/calendar.csv' DELIMITER ',' CSV HEADER;
+-- -- Load data into Listings
+-- COPY Listings(id, name, neighbourhood, room_type, price, minimum_nights, maximum_nights, number_of_reviews, last_review, calculated_host_listings_count, availability_365)
+-- FROM '/tmp/listings.csv' DELIMITER ',' CSV HEADER;
+-- -- Load data into Calendar
+-- COPY Calendar(listing_id, date, available, price)
+-- FROM '/tmp/calendar.csv' DELIMITER ',' CSV HEADER;
