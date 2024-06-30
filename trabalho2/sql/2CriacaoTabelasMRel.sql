@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Propriedades CASCADE;
 CREATE TABLE Propriedades(
-    ID BIGINT , 
+    ID BIGINT PRIMARY KEY, 
     Nome VARCHAR(300) ,
     Endereco VARCHAR(100) ,
     IDLocalizacao INT ,
@@ -20,7 +20,7 @@ CREATE TABLE Propriedades(
 
 DROP TABLE IF EXISTS Localizacoes CASCADE; 
 CREATE TABLE Localizacoes(
-    ID INT ,
+    ID SERIAL PRIMARY KEY ,
     Pais VARCHAR(50) ,
     Estado VARCHAR(50) ,
     Cidade VARCHAR(50) ,
@@ -121,59 +121,3 @@ CREATE TABLE Regras(
     IDPropriedade BIGINT,
     Regra VARCHAR(200)
 );
-
-DROP TABLE IF EXISTS Reviews CASCADE;
-CREATE TABLE Reviews(
-    listing_id BIGINT,
-    date_ DATE
-);
-
-DROP TABLE IF EXISTS Listings CASCADE;
-CREATE TABLE Listings(
-    ID BIGINT,
-    name_ VARCHAR(200),
-    host_id INT,
-    host_name VARCHAR(60),
-    neighbourhood_group VARCHAR(50), --x
-    neighbourhood VARCHAR(50), --x
-    latitude FLOAT, --x
-    longitude FLOAT, --x
-    room_type VARCHAR(50), --x
-    price INT,
-    minimum_nights INT,
-    number_of_reviews INT, --x
-    last_review DATE, --x
-    reviews_per_month FLOAT, --x
-    calculated_host_listings_count INT, --x
-    availability_365 INT, --x
-    number_of_reviews_ltm INT, --x
-    license VARCHAR(50) --x
-);
-
-DROP TABLE IF EXISTS Calendar CASCADE;
-CREATE TABLE Calendar(
-    listing_id BIGINT,
-    date_ DATE,
-    available VARCHAR(3), --x
-    price VARCHAR(30),
-    adjusted_price VARCHAR(30),
-    minimum_nights INT,
-    maximum_nights INT
-);
-
-INSERT INTO Mensagens (IDPropriedade, DataCriacao) --preencher as tabelas com os dados do reviews
-SELECT listing_id, date_
-FROM Reviews;
-
-INSERT INTO Locacao (IDPropriedade, DataReserva)
-SELECT listing_id, date_
-FROM Calendar
-WHERE available = 't';
-
-INSERT INTO Propriedades (ID, Nome, IDAnfitriao, PrecoDiaria, MinNoites) --preencher as tabelas com os dados do listings
-SELECT ID, name_, host_id, price, minimum_nights --n sei colocar o nome do anfitriao
-FROM Listings;
-
-INSERT INTO Usuarios (ID, Nome, EAnfitriao)
-SELECT host_id, host_name, TRUE
-FROM Listings;
