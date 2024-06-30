@@ -16,4 +16,6 @@ A entrega está dividida de acordo com as tarefas
 4. [Carga das tabelas mapeadas](sql/3CargaTabelasMRel.sql)
 
 ### Tarefa 4
-1. [Query](sql/ex6.sql) e [Explicação](pdf/ex6.pdf)
+1. [Query](sql/ex6.sql) e [Explicação](pdf/ex6.pdf) do exercício 6
+2. [Query](sql/ex7.sql) e [Explicação](pdf/ex7.pdf) do exercício 7
+3. [Query](sql/ex8.sql) e [Explicação](pdf/ex8.pdf) do exercício 8

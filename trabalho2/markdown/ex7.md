@@ -1,0 +1,63 @@
+# Exercício 7
+Primeiro, criamos visão chamada PropriedadesDisponiveis que contém todas as propriedades disponíveis durante o ano de 2024, junto com as datas específicas em que estão disponíveis. Usamos CREATE OR REPLACE VIEW, que substitui a visão se ela já existir ou a cria se não existir. A seleção de dados é feita a partir das tabelas Propriedades e DatasDisponiveis, onde há um JOIN entre elas baseado nos IDs equivalentes. A cláusula WHERE filtra apenas as datas de 2024.
+
+Depois, realizamos uma consulta na visão para calcular o preço médio das diárias por mês. Utiliza-se a função EXTRACT para extrair o mês da data. A função AVG calcula a média dos valores presentes na coluna PrecoDiaria. O resultado é agrupado por mês utilizando a cláusula GROUP BY, e os resultados são ordenados pelo mês com a cláusula ORDER BY.
+
+<table>
+    <thead>
+        <tr>
+            <th>mes</th>
+            <th>precomedio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1.0</td>
+            <td>1329.1753055440604</td>
+        </tr>
+        <tr>
+            <td>2.0</td>
+            <td>1323.7826720229286</td>
+        </tr>
+        <tr>
+            <td>3.0</td>
+            <td>1242.4417729409627</td>
+        </tr>
+        <tr>
+            <td>4.0</td>
+            <td>1290.4259413334337</td>
+        </tr>
+        <tr>
+            <td>5.0</td>
+            <td>1286.8790061012612</td>
+        </tr>
+        <tr>
+            <td>6.0</td>
+            <td>1298.3419265975792</td>
+        </tr>
+        <tr>
+            <td>7.0</td>
+            <td>1354.2343028632836</td>
+        </tr>
+        <tr>
+            <td>8.0</td>
+            <td>1357.2291659674443</td>
+        </tr>
+        <tr>
+            <td>9.0</td>
+            <td>1378.3846521373125</td>
+        </tr>
+        <tr>
+            <td>10.0</td>
+            <td>1441.7579053498966</td>
+        </tr>
+        <tr>
+            <td>11.0</td>
+            <td>1434.3198859215672</td>
+        </tr>
+        <tr>
+            <td>12.0</td>
+            <td>1404.391295106963</td>
+        </tr>
+    </tbody>
+</table>
