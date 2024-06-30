@@ -7,23 +7,21 @@ A tabela Listings armazena anúncios de Propriedades no Airbnb. Assim, ela armaz
 Para mapear a relação precisamos entender quais são as chaves primárias de Listings. Inicialmente, vemos que **name, host_id** é um forte candidato. Porém, **name** possui um nome em constante mudança devido as avaliações. Assim, efetuamos um recorte na string a fim de torná-lo chave:
 
 ``` sql
-UPDATE Listings 
+UPDATE Listings
 SET name_ = CONCAT(
-    SPLIT_PART(name_, '·', 1), 
+    SPLIT_PART(name_, '·', 1),
     SPLIT_PART(name_, '·', 3),
-    SPLIT_PART(name_, '·', 4), 
+    SPLIT_PART(name_, '·', 4),
     SPLIT_PART(name_, '·', 5)
 )
 ```
 
-Dessa forma, `Condo in Rio de Janeiro · ★4.70 · 2 bedrooms · 2 beds · 1 bath` se transforma em `Condo in Rio de Janeiro 2 bedrooms 2 beds 1 bath` e podemos criar uma tabela em SQL para Listings. 
+Dessa forma, `Condo in Rio de Janeiro · *4.70 · 2 bedrooms · 2 beds · 1 bath` se transforma em `Condo in Rio de Janeiro 2 bedrooms 2 beds 1 bath` e podemos criar uma tabela em SQL para Listings. 
 
 
-
-**
-| **Atributo em Listings**     | **Atributo em Propriedade**              |
+| **Atributo em Listings**     | **Atributo em Propriedade**      |
 | ------------------------ | ------------------------------------ |
-| id                       | NULL                                   |
+| id                       | NULL                                 |
 | name                     | Nome                                 |
 | host\_id                 | IDAnfitriao                          |
 | neighbourhood\_group     | NULL                                 |
