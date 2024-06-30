@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS Propriedades CASCADE;
 CREATE TABLE Propriedades(
     ID SERIAL,
-    Nome VARCHAR(300) PRIMARY KEY,
+    Nome VARCHAR(300),
     Endereco VARCHAR(100),
     IDLocalizacao INT,
-    IDAnfitriao INT PRIMARY KEY,
+    IDAnfitriao INT,
     NQuartos INT,
     NBanheiros INT,
     PrecoDiaria float,
@@ -14,8 +14,8 @@ CREATE TABLE Propriedades(
     ValorLimpeza FLOAT,
     HoraCheckIn TIME,
     HoraCheckOut TIME,
-    CasaInteira BOOLEAN
-    -- DEFINIR CHAVE PRIMÁRIA
+    CasaInteira BOOLEAN,
+    PRIMARY KEY (Nome, IDAnfitriao)
 );
 
 
