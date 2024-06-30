@@ -60,7 +60,7 @@ Calendar só possui correspondência quando **available** é verdadeiro. A corre
 
 | **Atributo em Calendar** | **Correspondência em DatasDisponiveis** |
 | -------------------- | ------------------------------------ |
-| listing\_id          | IDPropriedade                        |
+| listing\_id          | NULL                        |
 | date                 | data                                 |
 | available            | se True                              |
 | price                | NULL                                 |
@@ -74,7 +74,9 @@ Calendar só possui correspondência quando **available** é verdadeiro. A corre
 
 | **Atributo em Reviews** | **Correspondência em Mensagem** |
 | ------------------- | --------------------------- |
-| listing\_id         | IDPropriedade               |
+| listing\_id         | NULL               |
 | date                | DataCriacao                 |
 
+Os atributos listing_id das relações tiradas do AirBnb não tem correspondência direta com o mapeamento. Esses atributos são apenas utilizados na carga dos dados.
+Além disso, há múltiplos listings para uma mesma propriedade, logo os atributos que tem correspondência são obtidos da primeira ocorrência encontrada.
 Todos os atributos que não foram colocados nas tabelas não tem correspondência entre eles, a exceção é **localização**, que pelo dataset ser exclusivo da cidade do Rio de Janeiro possui todos os atributos iguais, apenas variando o bairro.
