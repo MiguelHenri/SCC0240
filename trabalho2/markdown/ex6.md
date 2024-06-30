@@ -10,8 +10,14 @@ A segunda consulta tem como objetivo agrupar as propriedades da tabela Proprieda
 
 | **minnoites** | **numpropriedades** |
 |---------------|---------------------|
-| 1             | 9243                |
-| 2             | 10443               |
-| 3             | 7858                |
-| 4             | 2883                |
-| 5 ou mais     | 5581                |
+| 1             | 8008                |
+| 2             | 9390                |
+| 3             | 7235                |
+| 4             | 2674                |
+| 5 ou mais     | 5212                |
+
+A terceira consulta visa contar o número total de registros na tabela Localizacoes. Utilizamos a função COUNT(*):
+
+| **numerolocalizacoes** |
+|-----------------------|
+|          156          |
