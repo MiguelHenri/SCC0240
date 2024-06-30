@@ -6,7 +6,7 @@ CREATE TABLE Reviews(
 
 DROP TABLE IF EXISTS Listings CASCADE;
 CREATE TABLE Listings(
-    ID BIGINT,
+    ID BIGINT PRIMARY KEY,
     name_ VARCHAR(200),
     host_id INT,
     host_name VARCHAR(60),
