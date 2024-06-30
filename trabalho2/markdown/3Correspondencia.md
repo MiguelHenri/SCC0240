@@ -2,7 +2,9 @@
 Correlação entre os atributos existentes nas tabelas geradas pelo mapeamento e pela carga de dados.
 
 ## Listings
-Para realizar a correspondência de Listings com Propriedades, precisamos entender quais são as chaves primárias de Listings. Inicialmente, vemos que **name, host_id** é um forte candidato. Porém, **name** possui um nome em constante mudança devido as avaliações. Assim, efetuamos um recorte na string a fim de torná-lo chave:
+A tabela Listings armazena anúncios de Propriedades no Airbnb. Assim, ela armazena diversas informações que serão correspondentes a Propriedades e Usuários, mas não diretamente a nenhuma dessas relações.
+
+Para mapear a relação precisamos entender quais são as chaves primárias de Listings. Inicialmente, vemos que **name, host_id** é um forte candidato. Porém, **name** possui um nome em constante mudança devido as avaliações. Assim, efetuamos um recorte na string a fim de torná-lo chave:
 
 ``` sql
 UPDATE Listings 
@@ -14,7 +16,9 @@ SET name_ = CONCAT(
 )
 ```
 
-Dessa forma, `Condo in Rio de Janeiro · ★4.70 · 2 bedrooms · 2 beds · 1 bath` se transforma em `Condo in Rio de Janeiro 2 bedrooms 2 beds 1 bath` e a correspondência segue:
+Dessa forma, `Condo in Rio de Janeiro · ★4.70 · 2 bedrooms · 2 beds · 1 bath` se transforma em `Condo in Rio de Janeiro 2 bedrooms 2 beds 1 bath` e podemos criar uma tabela em SQL para Listings. 
+
+
 
 **
 | **Atributo em Listings**     | **Atributo em Propriedade**              |
@@ -45,9 +49,10 @@ Dessa forma, `Condo in Rio de Janeiro · ★4.70 · 2 bedrooms · 2 beds · 1 ba
 | host\_name                         | nome                        |
 | calculated\_host\_listings\_counts | NULL                        |
 
-A maior parte dos atributos de usuários não têm correspondência com a tabela de hosts obtida pela normalização, justamente pela falta de atributos que foi necessário adicionar **id** a Host.
+A maior parte dos atributos de usuários não têm correspondência com a tabela de hosts obtida pela normalização, justamente pela falta de atributos que foi necessário adicionar **ID** a Usuários.
 
 ## Calendar
+Calendar só possui correspondência quando **available** é verdadeiro. A correspondência ocorre apenas em dois atributos.
 
 | **Atributo em Calendar** | **Correspondência em DatasDisponiveis** |
 | -------------------- | ------------------------------------ |
@@ -59,7 +64,7 @@ A maior parte dos atributos de usuários não têm correspondência com a tabela
 | minimum\_nights      | NULL                                 |
 | maximum\_nights      | NULL                                 |
 
-Calendar só possui correspondência quando **available** é verdadeiro e é apenas em dois atributos, a modelagem a partir do enunciado não tem essa estrutura de dias diferentes com preços, noites mínimas e noites máximas diferentes.
+
 
 ## Reviews
 
