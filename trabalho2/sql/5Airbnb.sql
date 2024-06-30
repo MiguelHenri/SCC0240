@@ -11,7 +11,7 @@ CREATE TABLE Listings(
     host_id INT,
     host_name VARCHAR(60),
     neighbourhood_group VARCHAR(50), --x
-    neighbourhood VARCHAR(50), --x
+    neighbourhood VARCHAR(50), --x é o bairro
     latitude FLOAT, --x
     longitude FLOAT, --x
     room_type VARCHAR(50), --x
