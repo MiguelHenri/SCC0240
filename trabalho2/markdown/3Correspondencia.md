@@ -21,7 +21,6 @@ Dessa forma, `Condo in Rio de Janeiro · *4.70 · 2 bedrooms · 2 beds · 1 bath
 
 Para mapear as informações pra propriedade, será usado as duas relação oriundas de Listings original:
 
-**
 | **Atributo em Property** | **Atributo em Propriedade**          |
 | ------------------------ | ------------------------------------ |
 | name                     | Nome                                 |
@@ -37,7 +36,6 @@ Para mapear as informações pra propriedade, será usado as duas relação oriu
 | number\_of\_reviews\_ltm | NULL                                 |
 | license                  | NULL                                 |
 
-**
 | **Atributo em Listings** | **Atributo em Propriedade**              |
 | ------------------------ | ------------------------------------ |
 | id                       | NULL                                   |

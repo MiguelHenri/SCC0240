@@ -8,6 +8,7 @@ Listings = {<u>id</u>, name, host_id, host_name, neighbourhood_group, neighbourh
 **id** é chave candidata de listing, não há outras chaves em Listings
 
 as dependências funcionais entre atributos que não são chaves:
+
 - host_id &#8594; host_name, calculated_host_listings_counts
 
 A partir dessas dependências, cria-se uma nova relação chamada Hosts e removem-se os atributos que dependentes em Listings
@@ -22,12 +23,11 @@ Além disso, há dependências funcionais no que diz respeito à propriedade em 
 
 Para isso, cria-se uma nova relação:
 
-Property:
-<u>name, host_id</u>, neighbourhood_group, neighbourhood,latitude,longitude,room_type, calculated_host_listings_count, number_of_reviews_ltm, number_of_reviews, license
+Property = {<u>name, host_id</u>, neighbourhood_group, neighbourhood,latitude,longitude,room_type, calculated_host_listings_count, number_of_reviews_ltm, number_of_reviews, license}
 
 E por fim listings fica dessa forma:
 
-listings: <u>id</u>,name, host_id, price,minimum_nights, availability_365
+Listings = {<u>id</u>,name, host_id, price,minimum_nights, availability_365}
 
 
 ## Atributos de Calendar
