@@ -1,12 +1,3 @@
-INSERT INTO Mensagens (IDPropriedade, DataCriacao) --preencher as tabelas com os dados do reviews
-SELECT listing_id, date
-FROM Reviews;
-
-INSERT INTO DatasDisponiveis (IDPropriedade, Data)
-SELECT listing_id, date_
-FROM Calendar
-WHERE available = 't';
-
 -- atualizando listings para poder utilizar nome e id anfitriao como PK
 UPDATE Listings 
 SET name_ = CONCAT(
@@ -57,4 +48,28 @@ INSERT INTO Usuarios (ID, Nome, EAnfitriao, IDLocalizacao)
 SELECT 
     host_id, host_name, TRUE, IDLocalizacao
 FROM UsuariosUnicos
+WHERE RN = 1;
+
+-- preenchendo as mensagens com os dados do reviews
+INSERT INTO Mensagens (IDPropriedade, DataCriacao)
+SELECT P.ID, R.date
+FROM Reviews R
+JOIN Listings L ON L.ID = R.listing_id -- é necessário obter o listing id
+JOIN Propriedades P ON P.Nome = L.name_ AND P.IDAnfitriao = L.host_id;
+
+-- preenchendo datas disponíveis com dados do calendar
+WITH DatasUnicas AS (
+    SELECT DISTINCT
+        P.ID, 
+        C.date_ AS Data,
+        ROW_NUMBER() OVER (PARTITION BY C.listing_id, C.date_ ORDER BY C.listing_id) AS RN
+    FROM Calendar AS C
+    JOIN Listings L ON L.ID = C.listing_id -- é necessário obter o listing id
+    JOIN Propriedades P ON P.Nome = L.name_ AND P.IDAnfitriao = L.host_id
+    WHERE C.available = 't' 
+)
+INSERT INTO DatasDisponiveis (IDPropriedade, Data)
+SELECT
+    ID, Data
+FROM DatasUnicas
 WHERE RN = 1;
