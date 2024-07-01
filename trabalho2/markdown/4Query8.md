@@ -19,10 +19,12 @@ Criamos uma consulta para buscar os dados dos anfitriões que possuem pelo menos
 Além disso, criamos um índice na coluna IDAnfitriao da tabela Propriedades (antes dropamos caso exista). Este índice é criado para melhorar o desempenho da consulta, que utiliza essa coluna no JOIN. Isso é útil em tabelas com muitos registros. Utilizamos o comando EXPLAIN ANALYZE para analisar os tempos de execução das consultas após a criação do índice e verificar sua eficácia.
 
 Sem índice: 
+
 - Planning Time: 0.673 ms
 - Execution Time: 201.318 ms
 
 Com índice:
+
 - Planning Time: 5.568 ms
 - Execution Time: 142.506 ms
        

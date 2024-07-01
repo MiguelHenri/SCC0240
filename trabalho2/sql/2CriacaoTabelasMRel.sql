@@ -29,7 +29,7 @@ CREATE TABLE Usuarios(
 
 DROP TABLE IF EXISTS Propriedades CASCADE;
 CREATE TABLE Propriedades(
-    ID SERIAL,
+    ID SERIAL UNIQUE,
     Nome VARCHAR(300),
     Endereco VARCHAR(100),
     IDLocalizacao INT,
@@ -106,7 +106,7 @@ DROP TABLE IF EXISTS PontosInteresse CASCADE;
 CREATE TABLE PontosInteresse(
     IDLocalizacao INT,
     NOME VARCHAR(50),
-    PRIMARY KEY (IDLocalizacao, Nome)
+    PRIMARY KEY (IDLocalizacao, Nome),
     CONSTRAINT fk_ponto_localizacao
       FOREIGN KEY(IDLocalizacao)
         REFERENCES Localizacoes(ID)

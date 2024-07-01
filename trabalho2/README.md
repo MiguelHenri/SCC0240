@@ -1,5 +1,13 @@
 # 🏡 Trabalho 2: AirBnb (pt2)
 
+### Alunos
+- [Albert Shoji](https://github.com/Albshoji),
+- [Gustavo Grande](https://github.com/gb-grande),
+- [Miguel Henriques](https://github.com/MiguelHenri),
+- [Vítor Fróis](http://www.github.com/vitorfrois).
+
+## Entrega
+
 A entrega está dividida de acordo com as tarefas
 
 ### Tarefa 1
@@ -16,6 +24,6 @@ A entrega está dividida de acordo com as tarefas
 4. [Carga das tabelas mapeadas](sql/3CargaTabelasMRel.sql)
 
 ### Tarefa 4
-1. [Query](sql/ex6.sql) e [Explicação](pdf/ex6.pdf) do exercício 6
-2. [Query](sql/ex7.sql) e [Explicação](pdf/ex7.pdf) do exercício 7
-3. [Query](sql/ex8.sql) e [Explicação](pdf/ex8.pdf) do exercício 8
+1. [Query](sql/4Query6.sql) e [Explicação](pdf/4Query6.pdf) do exercício 6
+2. [Query](sql/4Query7.sql) e [Explicação](pdf/4Query7.pdf) do exercício 7
+3. [Query](sql/4Query8.sql) e [Explicação](pdf/4Query8.pdf) do exercício 8
