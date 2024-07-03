@@ -1,11 +1,10 @@
 # 🎲 Banco de Dados 
 * SCC0240 - Banco de Dados (2024).
-* Disciplina ministrada pelo professor Caetano Traina Junior.
+* Disciplina ministrada pelo professor Caetano Traina Junior, ICMC - USP.
 
 ## Trabalhos
-- [Trabalho 1](trabalho1/)
-- [Trabalho 2](trabalho2/)
-
+- [Trabalho 1](trabalho1/).
+- [Trabalho 2](trabalho2/).
 
 ## 🤝 Contribuidores
 
