@@ -1,14 +1,8 @@
 # 🏡 Trabalho 2: AirBnb (pt2)
 
-### Alunos
-- [Albert Shoji](https://github.com/Albshoji),
-- [Gustavo Grande](https://github.com/gb-grande),
-- [Miguel Henriques](https://github.com/MiguelHenri),
-- [Vítor Fróis](http://www.github.com/vitorfrois).
-
 ## Entrega
 
-A entrega está dividida de acordo com as tarefas
+A entrega está dividida de acordo com as tarefas.
 
 ### Tarefa 1
 1. [Modelagem MER](pdf/1MER.pdf)
