@@ -1,2 +1,4 @@
 *.sql linguist-detectable=true
 *.sql linguist-language=sql
+trabalho1/t1.ipynb linguist-vendored
+trabalho2/t2.ipynb linguist-vendored
